@@ -1,0 +1,106 @@
+#page-landing {
+  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%) no-repeat;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+}
+
+#container {
+  margin: auto; /* -> Nesse caso ele consegue alinhar em todas as direções pq o elemento anterior é display flex. */
+  width: min(90%, 112rem);
+}
+
+#logo {
+  animation-delay: 50ms;
+}
+
+.location,
+h1,
+.visit p {
+  height: 16vh;
+}
+
+.location {
+  animation-delay: 100ms;
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+main h1 {
+  animation-delay: 150ms;
+  font-size: clamp(
+    4rem,
+    8vw,
+    8.4rem
+  ); /* Valor Mínimo, Valor Ideal, Valor Máximo */
+}
+
+.visit a {
+  width: 8rem;
+  height: 8rem;
+  background: #fff666;
+  border: none;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Como o elemento anterior não tem display flex, só é automático nas laterais */
+  transition: background 0.3s;
+  animation-delay: 250ms;
+}
+
+.visit a:hover {
+  background: #96fffeff;
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
+/* Versão Desktop */
+@media (min-width: 760px) {
+  #container {
+    background: url(../images/bg.svg) no-repeat 80%
+      //*Size*/clamp(30rem, 54vw, 56rem);;
+    padding: 5rem 2rem;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .location,
+  h1,
+  .visit p {
+    height: initial;
+    text-align: initial;
+  }
+
+  .location {
+    text-align: right;
+  }
+
+  h1 {
+    font-weight: 800;
+    width: min(300px, 80%);
+    line-height: 0.88;
+    margin: clamp(10%, 9vh, 12%) 0 4rem;
+  }
+
+  .visit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .visit a {
+    margin: initial;
+  }
+
+  .visit p {
+    line-height: 1.5;
+    width: clamp(20rem, 20vw, 30rem);
+  }
+}
