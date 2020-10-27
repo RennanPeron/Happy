@@ -66,10 +66,14 @@ module.exports = {
                 opening_hours: fields.opening_hours,
                 open_on_weekends: fields.open_on_weekends,
             })
-            res.redirect('/orphanages')
+            res.redirect('/success')
         } catch (error) {
             res.render('Erro no banco de dados');
             console.log(error);
         }   
+    },
+
+    successPage(req,res) {
+        return res.render('success')
     }
 }

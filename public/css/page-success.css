@@ -1,0 +1,52 @@
+#page-success{
+    background: #37C77F;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+}
+
+#container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: min(90%, 112rem);
+}
+
+main h1{
+    font: 800 8rem/1 "Nunito", sans-serif;
+    margin-bottom: 3.2rem;   
+}
+
+main p {
+    font: 600 2.4rem/1.5 "Nunito", sans-serif;
+    margin-bottom: 6rem;
+}
+
+main a {
+    text-decoration: none;
+    color: white;
+    background: #31B272;
+    border-radius: 2rem;
+    padding: 2rem 4rem;
+    transition: background .2s;
+}
+
+main a:hover {
+    background: #3BD689;
+}
+
+img {
+    display: none;
+}
+
+@media (min-width: 760px) {
+    main {
+        align-items: space-around;
+    }
+
+    img {
+        display: block;
+        width: 37%;
+    }
+}

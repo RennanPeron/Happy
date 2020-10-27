@@ -20,6 +20,7 @@ server
 .get('/orphanage', pages.orphanage)
 .get('/orphanages', pages.orphanages)
 .post('/save-orphanage', pages.saveOrphanage)
+.get('/success', pages.successPage)
 
 // ligar o servidor
 .listen(5500)
